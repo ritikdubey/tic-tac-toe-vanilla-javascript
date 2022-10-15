@@ -1,0 +1,22 @@
+.outer-div,  .inner-div{
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;    
+}
+
+.outer-div{
+    display: inline-block;
+}
+
+.inner-div{
+    display: inline-block;
+}
+
+.master-div{
+    margin-left: 40%;
+    margin-top: 20%;
+}
+
+.red{
+    background-color: red;
+}
