@@ -30,10 +30,11 @@ function move(e){
         }
     }
     if(blueTurn){
+        currentTurnDiv.style.color = 'red';
         currentTurnDiv.innerText = 'Red';
-        currentTurnDiv.style.color = 'Red';
     }
     else if(!blueTurn){
+        currentTurnDiv.style.color = 'blue';
         currentTurnDiv.innerText = 'Blue';
     }
     blueTurn = !blueTurn;
@@ -48,6 +49,8 @@ function checkResult(){
         resultDiv.innerText = 'Draw';
         const newGameBtn = document.getElementById('newGameBtn');
         newGameBtn.style.display = 'block';
+        const currentTurnHeading = document.getElementById('currentTurnHeading');
+        currentTurnHeading.style.display = 'none';
     }
     if((redMoves.includes(1) && redMoves.includes(2) && redMoves.includes(3)) ||
        (redMoves.includes(4) && redMoves.includes(5) && redMoves.includes(6)) ||
@@ -61,6 +64,10 @@ function checkResult(){
         gameOver = true;
         const resultDiv = document.getElementById('result');
         resultDiv.innerText = 'Red Won!';
+        const newGameBtn = document.getElementById('newGameBtn');
+        newGameBtn.style.display = 'block';
+        const currentTurnHeading = document.getElementById('currentTurnHeading');
+        currentTurnHeading.style.display = 'none';
     }
     else if((blueMoves.includes(1) && blueMoves.includes(2) && blueMoves.includes(3)) ||
        (blueMoves.includes(4) && blueMoves.includes(5) && blueMoves.includes(6)) ||
@@ -74,5 +81,9 @@ function checkResult(){
         gameOver = true;
         const resultDiv = document.getElementById('result');
         resultDiv.innerText = 'Blue Won!';
-    }
+        const newGameBtn = document.getElementById('newGameBtn');
+        newGameBtn.style.display = 'block';
+        const currentTurnHeading = document.getElementById('currentTurnHeading');
+        currentTurnHeading.style.display = 'none';
+   }
 }
