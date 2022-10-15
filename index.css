@@ -20,3 +20,11 @@
 .red{
     background-color: red;
 }
+
+.blue{
+    background-color: skyblue;
+}
+
+#newGameBtn{
+    display: none;
+}
