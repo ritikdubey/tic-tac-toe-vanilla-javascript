@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <h1 id="main-heading">Tic Tac Toe</h1>
+    <h1 id="currentTurnHeading">Current Turn: <span id="currentTurn"> Red </span> </h1>
     <div class="master-div">
         <div class="outer-div">
             <div class="inner-div" id="1" onclick="move(event)"></div>
@@ -25,9 +27,8 @@
             <div class="inner-div" id="9" onclick="move(event)"></div>    
         </div>
     </div>
-    <h1>Current Turn: <span id="currentTurn"> Red </span> </h1>
     <h1 id="result"></h1>
-    <button id="newGameBtn" onclick="location.reload()">New Game</button>
+    <button id="newGameBtn" onclick="location.reload()">Play Again</button>
     <script src="index.js"></script>
 </body>
 </html>
